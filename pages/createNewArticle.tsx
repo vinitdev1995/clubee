@@ -58,7 +58,9 @@ const CreateNewArticle: React.FC<CreateNewArticleProps> = ({
         }
       case 'intro':
         if (!value) {
-          return 'Please Enter Description!!';
+          return 'Please Enter Intro!!';
+        } else if (value.length > 255) {
+          return 'Allow max 255 char';
         } else {
           return null;
         }
